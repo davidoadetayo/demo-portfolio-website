@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Adetayo | Front-End Developer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="David Adetayo's official portfolio - Front-End Developer specializing in responsive web design, user experience, and digital creativity."
+    />
+    <meta
+      name="keywords"
+      content="David Adetayo, Front-End Developer, Web Developer, Responsive Design, Portfolio"
+    />
+    <meta name="author" content="David Adetayo" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="David Adetayo | Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Crafting user-focused, responsive websites and seamless digital experiences. View my projects and let's work together!"
+    />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/home-img.webp"
+    />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="David Adetayo | Front-End Developer" />
+    <meta
+      name="twitter:description"
+      content="Crafting seamless digital experiences with clean code and thoughtful design. Let's build your dream website together!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/images/home-img.webp"
+    />
+
+    <!-- Favicon and App Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="images/android-chrome-512x512.png"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+    /></noscript>
+
+    <!-- FontAwesome -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="...all.min.css" /></noscript>
+
+    <!-- Main CSS -->
+    <link
+      rel="preload"
+      href="/css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/css/style.css" />
+    </noscript>
+  </head>
+
+  <body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggler" id="theme-toggler">
+      <i class="fas fa-moon"></i>
+      <!-- Default icon (moon) -->
+    </div>
+
+    <!-- Main Container Start -->
+    <main class="main-container">
+      <!-- Nav Toggler -->
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+
+      <!-- Aside Navigation -->
+      <aside class="aside">
+        <div class="logo">
+          <a href="#"><span>D</span>avid</a>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fa fa-user"></i> About</a>
+            </li>
+            <li>
+              <a href="#services"><i class="fa fa-list"></i> Services</a>
+            </li>
+            <li>
+              <a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact"><i class="fa fa-comments"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!-- Main Content Start -->
+      <div class="main-content">
+        <!-- Home Section  Start-->
+        <section class="home-section" id="home">
+          <div class="container">
+            <div class="row">
+              <div class="home-info padd-15">
+                <h3 class="hello">
+                  Hello, my name is
+                  <span class="name">David Adetayo</span>
+                </h3>
+                <h3 class="my-profession">
+                  I'm a
+                  <span class="typing">Front-End Developer</span>
+                </h3>
+                <p>
+                  I specialize in crafting user-focused, responsive websites
+                  that transform ideas into seamless digital experiences —
+                  through clean code and thoughtful design.
+                </p>
+                <a href="#about" class="btn">More About Me</a>
+              </div>
+              <div class="home-img padd-15">
+                <img
+                  src="images/home-img.webp"
+                  alt="David Adetayo Profile Picture"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Home Section End -->
+
+        <!-- About Section Start -->
+        <section class="about-section section" id="about">
+          <div class="container padd-15">
+            <div class="row">
+              <div class="section-title">
+                <h2>About Me</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="about-content">
+                <div class="row">
+                  <div class="about-text padd-15">
+                    <h3>
+                      I'm David Adetayo a
+                      <span>Front-End Developer</span>
+                    </h3>
+                    <p>
+                      I'm a 14-year-old high school student who's passionate
+                      about building clean, responsive websites. I specialize in
+                      front-end development using HTML, CSS, JavaScript, and
+                      Bootstrap. I enjoy transforming simple ideas into
+                      user-friendly, mobile-ready experiences that look
+                      professional and work smoothly.
+                    </p>
+                    <br />
+                    <p>
+                      I'm always learning and improving, and I enjoy working on
+                      small real-world projects that help me grow while creating
+                      something meaningful. I value honesty, simplicity, and
+                      strong communication. If you're looking for someone
+                      focused, creative, and easy to work with — I'm here.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="personal-info">
+                    <div class="row padd-15">
+                      <div class="info-item">
+                        <p>
+                          Email :
+                          <span
+                            ><a href="mailto:david.1.adetayo@gmail.com"
+                              >david.1.adetayo@gmail.com</a
+                            ></span
+                          >
+                        </p>
+                      </div>
+
+                      <div class="info-item">
+                        <p>
+                          Phone :
+                          <span
+                            ><a href="tel:+2348168196771"
+                              >+234 816 819 6771</a
+                            ></span
+                          >
+                        </p>
+                      </div>
+
+                      <div class="info-item">
+                        <p>
+                          Freelance :
+                          <span>Available</span>
+                        </p>
+                      </div>
+
+                      <div class="info-item">
+                        <p>
+                          Degree :
+                          <span>High School Student</span>
+                        </p>
+                      </div>
+
+                      <div class="info-item">
+                        <p>
+                          Location :
+                          <span>Nigeria</span>
+                        </p>
+                      </div>
+
+                      <div class="info-item">
+                        <p>
+                          Experience :
+                          <span>Beginner-Level Projects</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row padd-15">
+                      <div class="buttons padd-15">
+                        <a href="#" class="btn">Download CV</a>
+                        <a href="#contact" class="btn hire-me">Hire Me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skills">
+                    <div class="row padd-15">
+                      <div class="skill-item">
+                        <h5>HTML</h5>
+                        <div class="skill-percent">87%</div>
+                        <div class="progress">
+                          <div class="progress-in html"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <h5>CSS</h5>
+                        <div class="skill-percent">56%</div>
+                        <div class="progress">
+                          <div class="progress-in css"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <h5>JS</h5>
+                        <div class="skill-percent">45%</div>
+                        <div class="progress">
+                          <div class="progress-in js"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <h5>Bootstrap</h5>
+                        <div class="skill-percent">66%</div>
+                        <div class="progress">
+                          <div class="progress-in bootstrap"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- About Section End -->
+
+        <!-- Services Section Start -->
+        <section class="services-section section" id="services">
+          <div class="container padd-15">
+            <div class="row">
+              <div class="section-title">
+                <h2>Services</h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="service-item">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-light fa-desktop"></i>
+                  </div>
+                  <h4>Web Developer</h4>
+                  <p>
+                    Eiusmod magna elit aliquip qui sint esse aliqua est magna.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-light fa-desktop"></i>
+                  </div>
+                  <h4>Web Developer</h4>
+                  <p>
+                    Eiusmod magna elit aliquip qui sint esse aliqua est magna.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-light fa-palette"></i>
+                  </div>
+                  <h4>Graphics Designer</h4>
+                  <p>
+                    Eiusmod magna elit aliquip qui sint esse aliqua est magna.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-light fa-palette"></i>
+                  </div>
+                  <h4>Graphics Designer</h4>
+                  <p>
+                    Occaecat do officia Lorem occaecat laborum elit in dolor
+                    quis ad laboris ad do eiusmod.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-simple fa-code"></i>
+                  </div>
+                  <h4>Front-End Developer</h4>
+                  <p>
+                    Occaecat do officia Lorem occaecat laborum elit in dolor
+                    quis ad laboris ad do eiusmod.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-simple fa-code"></i>
+                  </div>
+                  <h4>Front-End Developer</h4>
+                  <p>
+                    Occaecat do officia Lorem occaecat laborum elit in dolor
+                    quis ad laboris ad do eiusmod.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Services Section End -->
+
+        <!-- Portfolio Section Start -->
+        <section class="portfolio-section section" id="portfolio">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Portfolio</h2>
+              </div>
+            </div>
+
+            <div class="row padd-15">
+              <div class="portfolio-heading">
+                <h2>My Last Projects</h2>
+              </div>
+            </div>
+
+            <div class="row padd-15">
+              <div class="portfolio-item">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="/images/portfolio_img/img2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="/images/portfolio_img/img2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="/images/portfolio_img/img2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="/images/portfolio_img/img2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="/images/portfolio_img/img2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="/images/portfolio_img/img2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Portfolio Section End -->
+
+        <!-- Contact Section Start -->
+        <section class="contact-section section" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Contact</h2>
+              </div>
+            </div>
+
+            <h3 class="contact-title padd-15">Have you any questions?</h3>
+            <h4 class="contact-sub-title padd-15">I'm at your service</h4>
+
+            <div class="row">
+              <div class="contact-info-item padd-15">
+                <div class="icon">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <h4>Call Me On</h4>
+                <a href="tel:2348168196771"> +234 816 819 6771 </a>
+              </div>
+
+              <div class="contact-info-item padd-15">
+                <div class="icon">
+                  <i class="fa fa-light fa-envelope"></i>
+                </div>
+                <h4>Email</h4>
+                <a href="mailto:david.1.adetayo@gmail.com"
+                  >david.1.adetayo@gmail.com</a
+                >
+              </div>
+
+              <div class="contact-info-item padd-15">
+                <div class="icon">
+                  <i class="fa fa-solid fa-map-location"></i>
+                </div>
+                <h4>Location</h4>
+                <a
+                  href="https://www.google.com/maps/place/Lagos,+Nigeria"
+                  target="_blank"
+                  rel="noopener"
+                  >Nigeria</a
+                >
+              </div>
+            </div>
+
+            <h3 class="contact-title padd-15">Have a project idea?</h3>
+            <h3 class="contact-title padd-15">
+              Share it below and let's make it happen.
+            </h3>
+
+            <h4 class="contact-sub-title padd-15">
+              I build reliable websites with clear communication, zero stress &
+              real results.
+            </h4>
+
+            <div class="row">
+              <form class="contact-form padd-15" novalidate>
+                <div class="row">
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name"
+                        autocomplete="off"
+                        name="name"
+                      />
+                      <small class="error-message"></small>
+                    </div>
+                  </div>
+
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                        autocomplete="off"
+                        name="email"
+                      />
+                      <small class="error-message"></small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Subject"
+                        autocorrect="on"
+                        name="subject"
+                      />
+                      <small class="error-message"></small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <textarea
+                        class="form-control custom-textarea"
+                        placeholder="Message"
+                        autocorrect="on"
+                        name="message"
+                      ></textarea>
+                      <small class="error-message"></small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section End -->
+      </div>
+      <!-- Main Content End -->
+    </main>
+    <!-- Main Container End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 David Adetayo. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
