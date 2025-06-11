@@ -3,48 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Message Sent</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        font-family: sans-serif;
-        background-color: #f0f4f8;
-        text-align: center;
-        padding: 20px;
-      }
-      .thank-you {
-        background: white;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        color: #2d89e5;
-      }
-      p {
-        color: #333;
-        margin: 20px 0;
-      }
-      a {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background: #2d89e5;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-      }
-    </style>
+    <title>Thank You</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/thank-you.css">
   </head>
   <body>
-    <div class="thank-you">
-      <h1>Thank You!</h1>
-      <p>Your message has been sent successfully.</p>
-      <a href="index.html">Back to Home</a>
-    </div>
+    <h1>Thank you! 🎉</h1>
+    <p>Your message has been sent successfully.</p>
+    <a href="index.html" id="back-home">← Back to Home</a>
+
+    <script>
+      document.getElementById("back-home").addEventListener("click", function (e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = this.getAttribute("href");
+        }, 600); // must match the CSS transition duration
+      });
+    </script>
   </body>
 </html>

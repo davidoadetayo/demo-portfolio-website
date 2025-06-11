@@ -87,76 +87,95 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll(); // Run on page load
 
-// Form validation
-  const form = document.querySelector(".contact-form");
+const form = document.querySelector(".contact-form");
 
-  const fields = {
-    name: {
-      el: form.querySelector('input[name="name"]'),
-      validate: (val) => val.trim() !== "",
-      message: "Please enter your name.",
-    },
-    email: {
-      el: form.querySelector('input[name="email"]'),
-      validate: (val) => /^\S+@\S+\.\S+$/.test(val),
-      message: "Enter a valid email address.",
-    },
-    subject: {
-      el: form.querySelector('input[name="subject"]'),
-      validate: (val) => val.trim() !== "",
-      message: "Subject can't be empty.",
-    },
-    message: {
-      el: form.querySelector('textarea[name="message"]'),
-      validate: (val) => val.trim().length >= 35,
-      message: "Message must be at least 35 characters.",
-    },
-  };
+const fields = {
+  name: {
+    el: form.querySelector('input[name="name"]'),
+    validate: (val) => val.trim() !== "",
+    message: "Please enter your name.",
+  },
+  email: {
+    el: form.querySelector('input[name="email"]'),
+    validate: (val) => /^\S+@\S+\.\S+$/.test(val),
+    message: "Enter a valid email address.",
+  },
+  subject: {
+    el: form.querySelector('input[name="subject"]'),
+    validate: (val) => val.trim() !== "",
+    message: "Subject can't be empty.",
+  },
+  message: {
+    el: form.querySelector('textarea[name="message"]'),
+    validate: (val) => val.trim().length >= 35,
+    message: "Message must be at least 35 characters.",
+  },
+};
 
-  function setError(input, message) {
-    input.classList.remove("valid");
-    input.classList.add("invalid");
-    const errorTag = input.parentElement.querySelector(".error-message");
-    if (errorTag) errorTag.textContent = message;
-  }
+function setError(input, message) {
+  input.classList.remove("valid");
+  input.classList.add("invalid");
+  const errorTag = input.parentElement.querySelector(".error-message");
+  if (errorTag) errorTag.textContent = message;
+}
 
-  function setValid(input) {
-    input.classList.remove("invalid");
-    input.classList.add("valid");
-    const errorTag = input.parentElement.querySelector(".error-message");
-    if (errorTag) errorTag.textContent = "";
-  }
+function setValid(input) {
+  input.classList.remove("invalid");
+  input.classList.add("valid");
+  const errorTag = input.parentElement.querySelector(".error-message");
+  if (errorTag) errorTag.textContent = "";
+}
 
-  // Live validation
-  for (const key in fields) {
-    const field = fields[key];
-    field.el.addEventListener("input", () => {
-      if (field.validate(field.el.value)) {
-        setValid(field.el);
-      } else {
-        setError(field.el, field.message);
-      }
-    });
-  }
-
-  // Optional: Validate on submit
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    let allValid = true;
-    for (const key in fields) {
-      const field = fields[key];
-      if (!field.validate(field.el.value)) {
-        setError(field.el, field.message);
-        allValid = false;
-      }
-    }
-
-    if (allValid) {
-      alert("Form submitted successfully!");
-      // Submit logic here
+// Live validation
+for (const key in fields) {
+  const field = fields[key];
+  field.el.addEventListener("input", () => {
+    if (field.validate(field.el.value)) {
+      setValid(field.el);
+    } else {
+      setError(field.el, field.message);
     }
   });
+}
+
+// Form submission
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  let allValid = true;
+  for (const key in fields) {
+    const field = fields[key];
+    if (!field.validate(field.el.value)) {
+      setError(field.el, field.message);
+      allValid = false;
+    }
+  }
+
+  if (!allValid) return;
+
+  // If all fields are valid, proceed with form submission
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      window.location.href = "thank-you.html";
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("An error occurred. Please try again.");
+  }
+});
+
 
 // Url Observer
 
