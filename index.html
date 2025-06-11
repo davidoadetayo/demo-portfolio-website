@@ -42,37 +42,15 @@
     />
 
     <!-- Favicon and App Icons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href=images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href=images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href=images/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180"
+    href=images/apple-touch-icon.png" /> <link rel="icon" type="image/png"
+    sizes="32x32" href=images/favicon-32x32.png" /> <link rel="icon"
+    type="image/png" sizes="16x16" href=images/favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="shortcut icon" href=images/favicon.ico" type="image/x-icon" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href=images/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href=images/android-chrome-512x512.png"
-    />
+    <link rel="icon" type="image/png" sizes="192x192"
+    href=images/android-chrome-192x192.png" /> <link rel="icon" type="image/png"
+    sizes="512x512" href=images/android-chrome-512x512.png" />
 
     <!-- Google Fonts -->
     <link
@@ -97,11 +75,18 @@
     <noscript><link rel="stylesheet" href="...all.min.css" /></noscript>
 
     <!-- Main CSS -->
+
     <link
       rel="preload"
-      href="/css/style.css"
+      href="css/style.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+      media="print"
+      onload="this.media='all'"
     />
     <noscript>
       <link rel="stylesheet" href="css/style.css" />
@@ -173,11 +158,8 @@
                 <a href="#about" class="btn">More About Me</a>
               </div>
               <div class="home-img padd-15">
-                <img
-                  src=images/home-img.webp"
-                  alt="David Adetayo Profile Picture"
-                  loading="lazy"
-                />
+                <img src=images/home-img.webp" alt="David Adetayo Profile
+                Picture" loading="lazy" />
               </div>
             </div>
           </div>
