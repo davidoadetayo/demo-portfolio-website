@@ -65,10 +65,10 @@ li {
 --------------------------------------- */
 body {
   font-family: var(--font);
-  background: url("/images/bg_02.jpeg");
-  background-size: cover; /* Or 'contain', or specific px */
+  background: url("../images/bg_02.jpeg");
+  background-size: cover; 
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This keeps it static while you scroll */
+  background-attachment: fixed; 
   background-position: center;
   color: var(--text-main);
   line-height: 1.6;
@@ -166,7 +166,7 @@ body {
 
 /* Navigation Area */
 .aside .nav {
-  margin-top: 170px; /* Increased margin to match logo height */
+  margin-top: 170px; 
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -300,7 +300,6 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* Show the overlay when sidebar is open */
 .aside.open ~ .overlay {
   opacity: 1;
   visibility: visible;
@@ -894,8 +893,8 @@ section .container {
   text-align: center;
   display: block;
   padding: 20px;
-  background-color: var(--bg-main);
-  color: var(--text-light);
+  background-color: var(--bg-light);
+  color: var(--text-main);
   margin-left: 0;
   padding-left: 15%;
   align-self: stretch;
@@ -913,10 +912,10 @@ body.dark {
 }
 
 body.dark {
-  background: url("/images/bg_01.png");
-  background-size: cover; /* Or 'contain', or specific px */
+  background: url("../images/bg_01.png");
+  background-size: cover; 
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This keeps it static while you scroll */
+  background-attachment: fixed; 
   background-position: center;
   color: var(--text-main);
 }
