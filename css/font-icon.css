@@ -1,0 +1,13 @@
+.floating-label .icon {
+  margin-right: 6px;
+  color: var(--text-gray); /* or customize as you like */
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.floating-label input:focus + label .icon,
+.floating-label textarea:focus + label .icon,
+.floating-label input:not(:placeholder-shown) + label .icon,
+.floating-label textarea:not(:placeholder-shown) + label .icon {
+  color: var(--text-main);
+}
