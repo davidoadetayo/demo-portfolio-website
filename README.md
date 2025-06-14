@@ -3,7 +3,7 @@
 Welcome to my personal developer portfolio — a responsive website showcasing my projects, frontend skills, and passion for clean, user-friendly design.
 
 ## 🔗 Live Website
-[Visit my portfolio](https://davidadetayo.github.io/portfolio/)
+[Visit my portfolio](https://davidadetayo.github.io/demo-portfolio-website/)
 
 ## 🛠️ Tech Stack
 - HTML5  
