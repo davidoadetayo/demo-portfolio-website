@@ -17,5 +17,4 @@ Welcome to my personal developer portfolio — a responsive website showcasing m
 - Project showcase with hover effects
 
 ## 📫 Contact Me
-- X (Twitter): [@david_o_adetayo](https://x.com/david_o_adetayo)
-- LinkedIn: [David Adetayo](https://www.linkedin.com/in/david-adetayo-286218338/)
+- 📧 tolukorede4@gmail.com 
