@@ -112,6 +112,19 @@
     <noscript>
       <link rel="stylesheet" href="css/style.css" />
     </noscript>
+
+    <link rel="stylesheet" href="css/font-icon.css" />
+
+    <!-- Font Icon CSS (Optimized) -->
+    <link
+      rel="preload"
+      href="css/font-icon.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/font-icon.css" />
+    </noscript>
   </head>
 
   <body>
@@ -198,6 +211,7 @@
                 <h2>About Me</h2>
               </div>
             </div>
+
             <div class="row">
               <div class="about-content">
                 <div class="row">
@@ -214,7 +228,7 @@
                       user-friendly, mobile-ready experiences that look
                       professional and work smoothly.
                     </p>
-                    <br />
+                    
                     <p>
                       I'm always learning and improving, and I enjoy working on
                       small real-world projects that help me grow while creating
@@ -240,17 +254,6 @@
 
                       <div class="info-item">
                         <p>
-                          Phone :
-                          <span
-                            ><a href="tel:+2348168196771"
-                              >+234 816 819 6771</a
-                            ></span
-                          >
-                        </p>
-                      </div>
-
-                      <div class="info-item">
-                        <p>
                           Freelance :
                           <span>Available</span>
                         </p>
@@ -266,16 +269,17 @@
                       <div class="info-item">
                         <p>
                           Location :
-                          <span>Nigeria</span>
+                          <span>
+                            <a
+                              href="https://www.google.com/maps/place/Lagos,+Nigeria"
+                              target="_blank"
+                              rel="noopener"
+                              >Nigeria</a
+                            >
+                          </span>
                         </p>
                       </div>
 
-                      <div class="info-item">
-                        <p>
-                          Experience :
-                          <span>Beginner-Level Projects</span>
-                        </p>
-                      </div>
                     </div>
                     <div class="row padd-15">
                       <div class="buttons padd-15">
@@ -286,37 +290,29 @@
                   </div>
                   <div class="skills">
                     <div class="row padd-15">
+
                       <div class="skill-item">
                         <h5>HTML</h5>
-                        <div class="skill-percent">87%</div>
-                        <div class="progress">
-                          <div class="progress-in html"></div>
+                        <i class="fa-brands fa-html5 fa-2xl"></i>
+                       
                         </div>
                       </div>
 
                       <div class="skill-item">
                         <h5>CSS</h5>
-                        <div class="skill-percent">56%</div>
-                        <div class="progress">
-                          <div class="progress-in css"></div>
-                        </div>
+                      
                       </div>
 
                       <div class="skill-item">
                         <h5>JS</h5>
-                        <div class="skill-percent">45%</div>
-                        <div class="progress">
-                          <div class="progress-in js"></div>
-                        </div>
+                        
                       </div>
 
                       <div class="skill-item">
                         <h5>Bootstrap</h5>
-                        <div class="skill-percent">66%</div>
-                        <div class="progress">
-                          <div class="progress-in bootstrap"></div>
-                        </div>
+                       
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -492,8 +488,15 @@
               </div>
             </div>
 
-            <h3 class="contact-title padd-15">Have you any questions?</h3>
-            <h4 class="contact-sub-title padd-15">I'm at your service</h4>
+            <h3 class="contact-title padd-15">Have a project idea?</h3>
+            <h3 class="contact-title padd-15">
+              Share it below and let's make it happen.
+            </h3>
+
+            <h4 class="contact-sub-title padd-15">
+              I build reliable websites with clear communication, zero stress &
+              real results.
+            </h4>
 
             <div class="row">
               <div class="contact-info-item padd-15">
@@ -528,16 +531,6 @@
               </div>
             </div>
 
-            <h3 class="contact-title padd-15">Have a project idea?</h3>
-            <h3 class="contact-title padd-15">
-              Share it below and let's make it happen.
-            </h3>
-
-            <h4 class="contact-sub-title padd-15">
-              I build reliable websites with clear communication, zero stress &
-              real results.
-            </h4>
-
             <div class="row">
               <form
                 class="contact-form padd-15"
@@ -556,7 +549,10 @@
                         required
                         placeholder=" "
                       />
-                      <label>Name</label>
+                      <label>
+                        <i class="fas fa-user icon"></i>
+                        Name
+                      </label>
                       <small class="error-message"></small>
                     </div>
                   </div>
@@ -571,7 +567,10 @@
                         required
                         placeholder=" "
                       />
-                      <label>Email</label>
+                      <label>
+                        <i class="fas fa-envelope icon"></i>
+                        Email
+                      </label>
                       <small class="error-message"></small>
                     </div>
                   </div>
@@ -588,7 +587,10 @@
                         required
                         placeholder=" "
                       />
-                      <label>Subject</label>
+                      <label>
+                        <i class="fas fa-pen-to-square icon"></i>
+                        Subject
+                      </label>
                       <small class="error-message"></small>
                     </div>
                   </div>
@@ -604,7 +606,10 @@
                         required
                         placeholder=" "
                       ></textarea>
-                      <label>Message</label>
+                      <label>
+                        <i class="fas fa-message icon"></i>
+                        Message
+                      </label>
                       <small class="error-message"></small>
                     </div>
                   </div>

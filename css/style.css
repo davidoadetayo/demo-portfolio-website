@@ -3,12 +3,12 @@
 --------------------------------------- */
 :root {
   --bg-main: #f2f2fc;
-  --bg-light: #ffffff;
-  --bg-border: #e8dfec;
+  --bg-light: #fffdfd;
+  --bg-border: #dddddd;
   --accent-color: #4e7ac7;
   --text-main: #302e4d;
   --text-light: #ffffff;
-  --text-gray: #d4d4d4;
+  --text-gray: #747474;
   --font: "Raleway", sans-serif;
 }
 
@@ -17,14 +17,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f1f1f; 
+  background: #1f1f1f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color); 
+  background-color: var(--accent-color);
   border-radius: 6px;
 }
-
 
 /* ---------------------------------------
     Base Reset
@@ -65,11 +64,7 @@ li {
 --------------------------------------- */
 body {
   font-family: var(--font);
-  background: url("../images/bg_02.jpeg");
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-position: center;
+  background: url("../images/bg_03.jpg") center / cover no-repeat fixed;
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
@@ -79,12 +74,12 @@ body {
     Layout
 --------------------------------------- */
 .main-container {
-  display: flex;
-  justify-content:center;
+  /* display: flex; */
+  justify-content: center;
 }
 
 .main-content {
-  padding-left: 17%;
+  /* padding-left: 17%; */
   width: 100%;
   transition: all 0.3s ease;
 }
@@ -93,6 +88,7 @@ body {
     Aside (Sidebar)
 --------------------------------------- */
 .aside {
+  visibility: hidden;
   width: 250px;
   background: var(--bg-light);
   position: fixed;
@@ -166,7 +162,7 @@ body {
 
 /* Navigation Area */
 .aside .nav {
-  margin-top: 170px; 
+  margin-top: 170px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -311,12 +307,14 @@ body {
 .section {
   background: transparent;
   min-height: 100dvh;
-  padding-left: 20px;
-  padding-right: 35px;
+  padding: 0 20px;
   opacity: 1;
+  align-items: center;
   transform: translateY(50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  display: block;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
 }
 
 .section-title {
@@ -362,7 +360,7 @@ body {
   margin-top: 20px;
   padding: 10px 25px;
   background: var(--accent-color);
-  border: 1px solid var(--bg-light);
+  border: 1px solid var(--text-main);
   color: #fff;
   border-radius: 12px;
   transition: 0.3s;
@@ -416,10 +414,6 @@ body {
   margin: auto;
 }
 
-.hidden {
-  display: none !important;
-}
-
 section .container {
   padding-top: 50px;
   padding-bottom: 70px;
@@ -453,10 +447,10 @@ section .container {
   align-items: center;
 }
 
-/* Home Info (Left side) */
 .home-section .home-info {
-  flex: 0 0 60%;
-  max-width: 60%;
+  flex: 2;
+  min-width: 400px;
+  max-height: 300px;
   margin-bottom: 30px;
 }
 
@@ -473,25 +467,25 @@ section .container {
 }
 
 .home-info h3.my-profession {
-  font-size: 30px;
+  font-size: 28px;
   margin: 15px 0 10px;
 }
 
 .home-info .typing {
-  color: var(--accent-color); /* Accent color for dynamic typing effect */
+  color: var(--accent-color);
 }
 
 .home-info p {
   margin-bottom: 70px;
   font-size: 20px;
+  font-weight: 500;
   color: var(--text-main);
 }
 
-/* Home Image (Right side) */
 .home-section .home-img {
-  flex: 0 0 40%;
-  max-width: 40%;
-  text-align: center;
+  flex: 1;
+  margin-left: 15px;
+  align-self: center;
   position: relative;
 }
 
@@ -502,8 +496,8 @@ section .container {
   width: 80px;
   border-top: 10px solid var(--accent-color);
   border-right: 10px solid var(--accent-color);
-  right: -10px;
-  top: -40px;
+  right: 0px;
+  top: -23px;
 }
 
 .home-img::after {
@@ -513,22 +507,20 @@ section .container {
   width: 80px;
   border-bottom: 10px solid var(--accent-color);
   border-left: 10px solid var(--accent-color);
-  left: -10px;
-  bottom: -40px;
+  left: -15px;
+  bottom: -25px;
 }
 
 .home-section .home-img img {
   margin: auto;
   border-radius: 7px;
-  height: 400px;
-  width: auto;
+  min-width: 280px;
+  max-width: 100%;
   object-fit: cover;
 }
 
 /* About Section */
 .about-section .about-content {
-  flex: 0 0 100%;
-  max-width: 100%;
   margin-top: 0;
   margin-left: 10px;
 }
@@ -545,6 +537,7 @@ section .container {
 }
 
 .about-section .about-content .about-text p {
+  margin-top: 15px;
   font-weight: 500;
   font-size: 17px;
   line-height: 28px;
@@ -552,14 +545,11 @@ section .container {
 }
 
 .about-section .about-content .personal-info {
-  flex: 0 0 60%;
-  max-width: 60%;
   margin-top: 40px;
 }
 
 .about-section .about-content .personal-info .info-item {
-  flex: 0 0 50%;
-  max-width: 50%;
+  min-width: 250px;
   padding: 0 15px;
 }
 
@@ -591,75 +581,38 @@ section .container {
 }
 
 .about-section .about-content .skills {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 40px;
   padding: 0 15px;
+
 }
 
 .about-section .about-content .skills .skill-item {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 25px;
-  position: relative; /* ADD THIS */
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: gray;
+  position: relative;
 }
 
 .about-section .about-content .skills .skill-item h5 {
   line-height: 40px;
   font-weight: 600;
   font-size: 16px;
-  color: var(--text-main);
+  color: var(--text-light);
   text-transform: capitalize;
-}
-
-.about-section .about-content .skills .skill-item .progress {
-  background-color: var(--bg-light);
-  height: 7px;
-  border-radius: 4px;
-  width: 100%;
-  position: relative;
-  overflow: hidden; /* ADD THIS */
-}
-
-.about-section .about-content .skills .skill-item .progress .progress-in {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-}
-
-.about-section .about-content .skills .skill-item .skill-percent {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 18px;
-  color: var(--text-main);
-  font-weight: 400;
-  line-height: 40px;
-}
-
-/* Specific widths */
-.progress-in.html {
-  width: 87%;
-}
-.progress-in.css {
-  width: 56%;
-}
-.progress-in.js {
-  width: 45%;
-}
-.progress-in.bootstrap {
-  width: 66%;
+  margin-bottom: 20px;
 }
 
 /* Services section */
 .services-section .service-item {
-  flex: 0 47%;
-  max-width: 47%;
-  margin-bottom: 50px;
-  margin-right: 26px;
+  flex: 1 0 45%;
+  margin: 25px 20px;
 }
 
 .services-section .service-item .service-item-inner {
@@ -715,8 +668,6 @@ section .container {
 
 /* Portfolio Section */
 .portfolio-section .portfolio-heading {
-  flex: 0 0 100%;
-  max-width: 100%;
   margin-bottom: 30px;
 }
 
@@ -727,10 +678,8 @@ section .container {
 }
 
 .portfolio-section .portfolio-item {
-  flex: 0 47%;
-  max-width: 47%;
-  margin-bottom: 50px;
-  margin-right: 26px;
+  flex: 1 0 45%;
+  margin: 25px 20px;
 }
 
 .portfolio-section .portfolio-item-inner {
@@ -830,6 +779,7 @@ section .container {
 
 .contact-section .contact-form .form-control:focus {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  border-color: var(--accent-color);
 }
 
 .contact-section .contact-form textarea.form-control {
@@ -844,6 +794,43 @@ section .container {
 
 .contact-section .contact-form .form-control::placeholder {
   color: var(--text-main);
+}
+
+.floating-label {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.floating-label input,
+.floating-label textarea {
+  width: 100%;
+  padding: 12px 12px 12px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+}
+
+.floating-label label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding-left: 10px;
+  color: var(--text-gray);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.floating-label input:focus + label,
+.floating-label textarea:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: -22px;
+  font-size: 15px;
+  color: var(--text-main);
+  font-weight: 550;
 }
 
 .contact-section .contact-form .btn {
@@ -896,13 +883,12 @@ section .container {
   background-color: var(--bg-light);
   color: var(--text-main);
   margin-left: 0;
-  padding-left: 15%;
   align-self: stretch;
 }
 
 /* Dark Theme Styles */
 body.dark {
-  --bg-main: #15181e ;
+  --bg-main: #15181e;
   --bg-light: #242931;
   --bg-border: transparent;
   --accent-color: #4e7ac7;
@@ -913,9 +899,9 @@ body.dark {
 
 body.dark {
   background: url("../images/bg_01.png");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-position: center;
   color: var(--text-main);
 }
@@ -972,17 +958,20 @@ body.dark .services-section .service-item .service-item-inner {
 }
 
 /* ====== Responsive for devices ≤ 991px (Tablets & Small Laptops) ====== */
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .main-content {
-    margin-left: 0;
+    padding-left: 0;
   }
+
   .aside {
     left: -100%;
     transition: 0.3s ease;
   }
+
   .aside.open {
     left: 0;
   }
+
   .nav-toggler {
     display: block;
   }
@@ -994,19 +983,28 @@ body.dark .services-section .service-item .service-item-inner {
 
 /* ====== Responsive for devices ≤ 768px (Large Phones & Tablets) ====== */
 @media (max-width: 768px) {
+  .main-content {
+    padding-left: 0;
+  }
+
   .section-title {
     font-size: 28px;
   }
+
   .home-info h3 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .home-img {
+    display: none;
   }
 }
 
 /* ====== Responsive for devices ≤ 576px (Phones) ====== */
 @media (max-width: 576px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   .main-content {
     padding-left: inherit;
@@ -1016,6 +1014,7 @@ body.dark .services-section .service-item .service-item-inner {
   .btn {
     padding: 8px 20px;
   }
+
   .nav a {
     font-size: 14px;
   }
