@@ -3,9 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/thank-you.css">
+    <title>🎉 Thank You | Your Message Was Sent - David Adetayo</title>
+    <!-- Favicon and App Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="images/android-chrome-512x512.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/thank-you.css" />
   </head>
   <body>
     <h1>Thank you! 🎉</h1>
@@ -13,13 +46,15 @@
     <a href="index.html" id="back-home">← Back to Home</a>
 
     <script>
-      document.getElementById("back-home").addEventListener("click", function (e) {
-        e.preventDefault();
-        document.body.classList.add("fade-out");
-        setTimeout(() => {
-          window.location.href = this.getAttribute("href");
-        }, 600); // must match the CSS transition duration
-      });
+      document
+        .getElementById("back-home")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = this.getAttribute("href");
+          }, 600); // must match the CSS transition duration
+        });
     </script>
   </body>
 </html>
