@@ -836,6 +836,7 @@ section .container {
 .contact-section .contact-form .btn {
   height: 50px;
   padding: 0 50px;
+  transition: all 10s ease;
 }
 
 /* Valid and error states */
