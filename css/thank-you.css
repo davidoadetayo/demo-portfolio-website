@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 100px 20px;
-  background: url('/images/bg_02.jpeg');
+  background: url('images/bg_02.jpeg');
   transition: opacity 0.6s ease;
 }
 
