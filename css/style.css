@@ -76,13 +76,10 @@ body {
 .main-container {
   margin-right: 0;
   padding-right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .main-content {
-  /* padding-left: 17%; */
+  padding-left: 250px; 
   width: 100%;
   transition: all 0.3s ease;
 }
