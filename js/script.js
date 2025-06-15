@@ -87,6 +87,8 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll(); // Run on page load
 
+
+// Contact Form Validation and Submission
 const form = document.querySelector(".contact-form");
 
 const fields = {
@@ -153,7 +155,6 @@ form.addEventListener("submit", async function (e) {
 
   if (!allValid) return;
 
-  // If all fields are valid, proceed with form submission
   const formData = new FormData(form);
 
   try {
@@ -168,13 +169,17 @@ form.addEventListener("submit", async function (e) {
     if (response.ok) {
       window.location.href = "thank-you.html";
     } else {
-      alert("Something went wrong. Please try again.");
+      // Parse and show the actual error from Formspree
+      const data = await response.json();
+      console.error("Formspree Error:", data);
+      alert("Something went wrong: " + (data.error || "Unknown error."));
     }
   } catch (err) {
-    console.error(err);
-    alert("An error occurred. Please try again.");
+    console.error("Network or JS error:", err);
+    alert("A network error occurred. Please try again.");
   }
 });
+
 
 
 // Url Observer
